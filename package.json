@@ -1,14 +1,14 @@
 {
   "name": "dboa-untangler",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "main.js",
   "dependencies": {
     "bower": "^1.4.1",
-    "dboa-js": "0.0.1",
-    "electron": "^0.4.1",
-    "jade": "^1.10.0",
+    "dboa-js": "^0.0.4",
     "knex": "^0.8.6",
-    "less": "^2.5.1"
+    "less": "^2.5.1",
+    "pg": "^4.3.0",
+    "q": "^1.4.1"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,12 @@
     "url": "https://github.com/apathinwalking/dboa-untangler/issues"
   },
   "homepage": "https://github.com/apathinwalking/dboa-untangler#readme",
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-coffee": "^2.3.1",
+    "gulp-jade": "^1.0.1",
+    "gulp-jade-inheritance": "^0.5.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

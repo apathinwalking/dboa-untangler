@@ -1,5 +1,7 @@
 *.iml
 .idea/*
 node_modules/*
+bower_components/*
 npm-debug.log
-config.json
+dist/config.json
+dist/*
