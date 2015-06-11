@@ -4,6 +4,7 @@ var config = require('./config.json'); //TODO: more config options
 var knex = require('knex')({client:'pg',connection:config.pg_conn_str});
 var Dboa = require('dboa-js');
 
+//initialize...
 var mainWindow = null;
 
 app.on('window-all-closed', function() {
@@ -35,13 +36,5 @@ app.on('ready', function() {
 
     mainWindow.webContents.on('did-finish-load', function(){
         console.log("Loaded web contents");
-        dboa.initialize().then(function(){
-            console.log(dboa);
-            return dboa.getTablesInSchema('public');
-        }).then(function(tables){
-            console.log(tables);
-            mainWindow.webContents.send("from-server",tables);
-        })
-
     });
 });

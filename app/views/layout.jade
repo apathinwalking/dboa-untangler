@@ -1,6 +1,7 @@
 doctype html
-html
+html(ng-app="myApp")
    head
       title dboa-untangler
-   body
+   body(ng-controller='WelcomeCtrl')
       block content
+      script(src='../js/bundle.js')
