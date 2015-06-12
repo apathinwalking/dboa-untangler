@@ -15,12 +15,14 @@ gulp.task('compile_jade', function(){
 
 gulp.task('browserify',function(){
     var b = browserify({
-       entries: ['./app/scripts/main.js'],
-       debug: true
+        entries: ['./app/scripts/main.js'],
+        debug: true,
+        bundleExternal:false
     });
-    b.bundle()
+
+    return b.bundle()
        .pipe(source('bundle.js'))
-       .pipe(gulp.dest('dist/js'))
+       .pipe(gulp.dest('dist/js/'));
 });
 
 
@@ -33,4 +35,5 @@ gulp.task('watch', function(){
     gulp.watch(['./app/views/*.jade'],['compile_jade']);
     gulp.watch(['./app/app.js'],['copy']);
     gulp.watch(['./app/scripts/main.js'],['browserify']);
+    gulp.watch(['./app/scripts/components/*'],['browserify']);
 });

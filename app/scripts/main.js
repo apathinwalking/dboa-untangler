@@ -1,15 +1,14 @@
 'use strict';
 
-var angular = require('angular');
 
+var angular = require('angular');
+require('angular-bootstrap-npm');//TODO:use napa for this...
 require('./components/welcome');
 
 angular.element(document).ready(function(){
-    require('ipc').on('connection',function(message){
-        console.log(message);
-    });
     var requires = [
-        'components.welcome'
+        'components.welcome',
+        'ui.bootstrap'
     ];
 
     angular.module('app',requires);

@@ -1,3 +1,8 @@
 extends layout
 block content
-	welcome-msg
+	div(ng-controller='ctrl')
+		accordion(close-others="oneAtATime")
+			accordion-group(heading="{{schema.table_schema}}" ng-repeat="schema in schemas")
+				ul
+					li(ng-repeat="table in schema.tables")
+						a {{table.table_name}}

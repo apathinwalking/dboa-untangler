@@ -33,7 +33,6 @@ app.on('ready', function() {
     });
 
     mainWindow.webContents.on('did-finish-load', function(){
-        console.log("Loaded web contents");
-        mainWindow.send('connection',config.pg_conn_str);
+        console.log("Loaded web contents!");
     });
 });

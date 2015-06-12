@@ -1,0 +1,19 @@
+{
+  "name": "dboa-untangler",
+  "version": "0.0.6",
+  "homepage": "https://github.com/apathinwalking/dboa-untangler",
+  "authors": [
+    "Evan Mahone <apathinwalking@gmail.com>"
+  ],
+  "license": "GPL-3.0",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}
