@@ -18,13 +18,13 @@ app.on('ready', function() {
     var ipc = require('ipc');
 
     // Create the browser window.
-    mainWindow = new BrowserWindow({width: 800, height: 600});
+    mainWindow = new BrowserWindow({width: 1000, height: 1000});
 
     // and load the index.html of the app.
     mainWindow.loadUrl('file://' + __dirname + '/views/index.html');
 
     // Open the devtools.
-    //mainWindow.openDevTools();
+    mainWindow.openDevTools();
 
     // Emitted when the window is closed
     mainWindow.on('closed', function() {

@@ -1,9 +1,17 @@
 'use strict';
 //please work pleas
+var q = require('q');
 var angular = require('angular'); // That's right! We can just require angular as if we were in node
-console.log('woo woo');
-var WelcomeCtrl = require('./controllers/WelcomeCtrl'); // We can use our WelcomeCtrl.js as a module. Rainbows.
+var knex = require('knex');
+var WelcomeCtrl = require('./controllers/WelcomeCtrl');
 
-var app = angular.module('myApp', []);
-app.controller('WelcomeCtrl', ['$scope', WelcomeCtrl]);
+
+var app = angular.module('myApp', []);//
+app.service('config',function(){
+    this.getConfig = function(){
+        return 'hello!';
+    };//
+});
+app.controller('WelcomeCtrl', ['$scope',WelcomeCtrl]);
+
 
