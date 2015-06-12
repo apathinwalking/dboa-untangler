@@ -1,8 +1,8 @@
 var gulp = require('gulp');
 var jadeInheritance = require('gulp-jade-inheritance');
 var jade = require('gulp-jade');
-var browserify = require('gulp-browserify');
-var concat = require('gulp-concat');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
 
 gulp.task('default', ['templates','copy_main']);
 
@@ -14,12 +14,12 @@ gulp.task('compile_jade', function(){
 });
 
 gulp.task('browserify',function(){
-   gulp.src('./app/scripts/main.js')
-       .pipe(browserify({
-           insertGlobals:true,
-           debug: true
-       }))
-       .pipe(concat('bundle.js'))
+    var b = browserify({
+       entries: ['./app/scripts/main.js'],
+       debug: true
+    });
+    b.bundle()
+       .pipe(source('bundle.js'))
        .pipe(gulp.dest('dist/js'))
 });
 

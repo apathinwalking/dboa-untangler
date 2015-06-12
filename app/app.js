@@ -1,8 +1,6 @@
 var app = require('app');
 var BrowserWindow = require('browser-window');
-var config = require('./config.json'); //TODO: more config options
-var knex = require('knex')({client:'pg',connection:config.pg_conn_str});
-var Dboa = require('dboa-js');
+var config = require('./config.json'); //TODO: do something if no config
 
 //initialize...
 var mainWindow = null;
@@ -36,5 +34,6 @@ app.on('ready', function() {
 
     mainWindow.webContents.on('did-finish-load', function(){
         console.log("Loaded web contents");
+        mainWindow.send('connection',config.pg_conn_str);
     });
 });
