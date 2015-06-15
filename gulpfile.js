@@ -4,7 +4,7 @@ var jade = require('gulp-jade');
 var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 
-gulp.task('default', ['templates','copy_main']);
+gulp.task('default', ['compile_jade','browserify','copy']);
 
 gulp.task('compile_jade', function(){
     gulp.src('./app/views/index.jade')
