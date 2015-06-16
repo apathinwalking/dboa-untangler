@@ -1,8 +1,5 @@
 extends layout
 block content
-	div(ng-controller='ctrl')
-		accordion(close-others="oneAtATime")
-			accordion-group(heading="{{schema.table_schema}}" ng-repeat="schema in schemas")
-				ul
-					li(ng-repeat="table in schema.tables")
-						a {{table.table_name}}
+	div(ui-layout="{ flow : 'column', dividerSize: 20}", ng-controller="ctrl")
+		div(ui-layout-container, ng-include="'templates/schema_view.html'")
+		div(ui-layout-container).js-back

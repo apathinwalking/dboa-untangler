@@ -1,6 +1,6 @@
 {
   "name": "dboa-untangler",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "homepage": "https://github.com/apathinwalking/dboa-untangler",
   "authors": [
     "Evan Mahone <apathinwalking@gmail.com>"
@@ -14,6 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap": "~3.3.4"
+    "bootstrap": "~3.3.4",
+    "angular-ui-layout": "~1.0.5"
   }
 }

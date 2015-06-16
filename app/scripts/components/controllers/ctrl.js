@@ -13,6 +13,6 @@ var Ctrl = function($scope,$q,init){
 
 };
 
-var ngModule = require('./');
+var ngModule = require('./../index');
 
 ngModule.controller('ctrl',['$scope','$q','init',Ctrl]);

@@ -2,7 +2,7 @@ var dboa = require('dboa-js');
 var remote = require('remote');
 var _ = require('lodash');
 
-var ngModule = require('./');
+var ngModule = require('./../index');
 
 ngModule.factory('init',['$q',function($q){
     var init = {};

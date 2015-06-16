@@ -6,6 +6,6 @@ var WelcomeMsg = function() {
     };
 };
 
-var ngModule = require('./');
+var ngModule = require('./../index');
 
 ngModule.directive('welcomeMsg',[WelcomeMsg]);

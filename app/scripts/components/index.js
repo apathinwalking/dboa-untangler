@@ -1,5 +1,5 @@
 module.exports = angular.module('components.welcome', []);
 
-require('./welcome.js');
-require('./init.js');
-require('./ctrl.js');
+require('./directives/welcome.js');
+require('./factories/init.js');
+require('./controllers/ctrl.js');
