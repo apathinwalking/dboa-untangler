@@ -1,5 +1,5 @@
 {
-  "name": "dboa-untangler",
+  "name": "ez-electron",
   "version": "0.0.8",
   "main": "main.js",
   "dependencies": {
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/apathinwalking/dboa-untangler.git"
+    "url": "git+https://github.com/apathinwalking/ez-electron.git"
   },
   "license": "GPL-3.0",
-  "description": "An electron application to help you untangle your (postgres) database.",
+  "description": "An electron application starter",
   "bugs": {
-    "url": "https://github.com/apathinwalking/dboa-untangler/issues"
+    "url": "https://github.com/apathinwalking/ez-electron/issues"
   },
-  "homepage": "https://github.com/apathinwalking/dboa-untangler#readme",
+  "homepage": "https://github.com/apathinwalking/ez-electron#readme",
   "devDependencies": {
     "bower": "^1.4.1",
     "bower-resolve": "^2.2.1",
