@@ -38,7 +38,7 @@
     "postinstall": "gulp && bower install"
   },
   "keywords": [
-    "electron",
+    "electron"
   ],
   "author": "Evan Mahone"
 }
