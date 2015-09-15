@@ -1,6 +1,6 @@
 var app = require('app');
 var BrowserWindow = require('browser-window');
-var config = require('./config.json'); //TODO: do something if no config
+//var config = require('./config.json'); //TODO: do something if no config
 
 //initialize...
 var mainWindow = null;
